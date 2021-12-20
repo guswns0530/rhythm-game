@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="180.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.RankingController">
+   <children>
+      <Pane layoutX="16.0" layoutY="13.0" prefHeight="154.0" prefWidth="901.0" style="-fx-background-color: #583d72;">
+         <children>
+            <Label fx:id="Lrank" alignment="CENTER" layoutX="22.0" layoutY="29.0" prefHeight="98.0" prefWidth="81.0" text="1." textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="63.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lscore" layoutX="299.0" layoutY="41.0" prefHeight="75.0" prefWidth="252.0" text="1,000,000" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="47.0" />
+               </font>
+            </Label>
+            <Label layoutX="594.0" layoutY="70.0" prefHeight="24.0" prefWidth="73.0" text="id :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="Lid" layoutX="642.0" layoutY="51.0" prefHeight="55.0" prefWidth="252.0" text="wooae3559" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="71.0" prefHeight="31.0" prefWidth="99.0" text="score :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.musicpane > .viewport {
+	-fx-background-color: transparent;
+}
+
+.loginBtn {
+	-fx-background-color: transparent;
+	-fx-border-radius: 0;
+	-fx-text-fill: #fff;
+}
+.loginBtn:hover {
+	-fx-background-color: #fff;
+	-fx-text-fill: #000;
+}
+
