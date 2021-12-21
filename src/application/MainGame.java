@@ -60,6 +60,7 @@ public class MainGame {
 	
 	public double totalTime = 0;
 	public Boolean GameOver = true;
+	public Boolean update = true;
 	public Boolean GameEnd = false;
 	
 	//초기화 애니메이션

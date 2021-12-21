@@ -14,10 +14,9 @@ public class JDBCUtil {
 			return null;
 		}
 
-		String connectionString = "jdbc:mysql://gondr.asuscomm.com/yy_10212" + "?useUnicode=true"
-				+ "&characterEncoding=utf8" + "&useSSL=false" + "&serverTimezone=Asia/Seoul";
-		String userId = "yy_10212";
-		String password = "@@p0413jwk";
+		String connectionString = "jdbc:mysql://localhost/rhythm_game";
+		String userId = "root";
+		String password = "";
 
 		Connection con = null;
 

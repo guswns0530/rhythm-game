@@ -39,6 +39,9 @@ public class Score extends GameObject{
 	@Override
 	public void update(double d) {
 		// TODO Auto-generated method stub
+		if(!MainGame.game.update ) {
+			return; 
+		}
 		
 		time += d;
 		

@@ -16,6 +16,8 @@ public class HpBar extends GameObject {
 	//이전 라이프
 	private double beforeLife;
 	
+	private double increase;
+	
 	private double gw;
 	private double gh;
 	private double padding;
@@ -25,8 +27,9 @@ public class HpBar extends GameObject {
 		this.canvas = canvas;
 		
 		
-		beforeLife = 0;
+		beforeLife = 0.1;
 		life = 100;
+		increase = Math.abs(life - beforeLife); 
 		
 		gw = canvas.getWidth();
 		gh = canvas.getHeight();
@@ -37,16 +40,22 @@ public class HpBar extends GameObject {
 	}
 	
 	public void minusLife() {
-		life -= 5;
+		life -= 8;
+		increase = Math.abs(life - beforeLife);
 		if(life <= 0) {
 			life = 0;
-			MainGame.game.GameEnd = true;
+			MainGame.game.update = false;
 		}
 	}
 	
 	public void plusLife(double plus) {
+		if(!MainGame.game.update) {
+			return ;
+		}
 		plus = Math.round(plus);
 		life += plus;
+		
+		increase = Math.abs(life - beforeLife);
 		
 		if(life > 100) {
 			life = 100;
@@ -59,15 +68,19 @@ public class HpBar extends GameObject {
 			return;
 		}
 		time += d;
-		
-		if(time >= 0.00001) {
+	 	
+		if(time >= 1.0 / 144) {
 			if(beforeLife > life ) {
-				beforeLife -= 0.4;
+				beforeLife -= increase / 144;
 				time = 0;
 			} else {
-				beforeLife += 0.4;
+				beforeLife += increase / 144;
 				time = 0;
 			}
+		}
+		
+		if(beforeLife <= 0) {
+			MainGame.game.GameEnd = true;
 		}
 	}
 
